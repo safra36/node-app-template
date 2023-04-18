@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+
+  node-app:
+    build:
+      context: ./node-app/
+    command: npm run dev
+    volumes:
+      - ./node-app/:/usr/src/app

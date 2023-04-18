@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+
+
+  node-app:
+    container_name: node-app
+    build:
+      context: ./node-app/
+    command: npm start
+    restart: on-failure
+    networks:
+      - shared-network
+
+
+networks:
+  shared-network:
+    external : true
